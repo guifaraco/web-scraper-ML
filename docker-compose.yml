@@ -1,0 +1,30 @@
+services:
+    scraper_service:
+        build: .
+
+        depends_on:
+            - mongodb_service
+
+        environment:
+            - MONGO_URI=mongodb://mongodb_service:27017/ml_data
+        networks:
+            - project_network
+
+    mongodb_service:
+        image: mongo:latest
+
+        ports:
+            - "27401:27017"
+
+        volumes:
+            - mongodb_data:/data/db
+
+        networks:
+            - project_network
+
+networks:
+    project_network:
+        driver: bridge
+
+volumes:
+    mongodb_data:
