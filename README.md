@@ -12,6 +12,8 @@ This project was created for learning purposes. It features a web scraper design
 -   **Data Analysis:** Clean, process, and analyze the scraped data to uncover insights and patterns.
 -   **Predictive Modeling:** Implement a machine learning model to make predictions based on the dataset.
 
+More info later...
+
 ---
 
 ## 📁 Diretory & File Structure:
